@@ -40,3 +40,6 @@ gem "mongoid", "~> 4.0.0"
 gem "font-awesome-rails"
 gem 'slim'
 gem 'quiet_assets'
+
+gem 'execjs'
+gem 'therubyracer', platforms: :ruby
