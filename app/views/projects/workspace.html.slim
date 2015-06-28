@@ -1,0 +1,24 @@
+.node-tree
+  = render partial: 'shared/page', collection: @project.pages.order_by(order: :asc)
+
+.forms style="display:none"
+  .node.frame
+    .rope
+    .node-bar
+      li.fa.fa-file-o
+      span.node-name
+      input.name-input type="text"
+  .node.feature
+    .rope
+    .node-bar
+      li.fa.fa-plus-square-o
+      li.fa.fa-minus-square-o
+      span.node-name
+      input.name-input type="text"
+
+      span.node-actions
+        li.fa.fa-plus.add-frame
+        li.fa.fa-folder-o.add-feature
+    .content
+      .features
+      .frames

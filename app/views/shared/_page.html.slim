@@ -1,0 +1,18 @@
+.node.page
+  .fake-rope
+  .node-bar
+    li.fa.fa-plus-square-o
+    li.fa.fa-minus-square-o
+    span.node-name  =page.name.capitalize
+    input.name-input type="text"
+
+    span.node-actions
+      li.fa.fa-plus.add-frame
+      li.fa.fa-folder-o.add-feature
+  .content
+    .features
+      = render partial: 'shared/feature',
+        collection: page.features.order_by(order: :asc),
+        locals: {need_rope: !page.frames.blank?}
+    .frames
+      = render partial: 'shared/frame', collection: page.frames.order_by(order: :asc)
